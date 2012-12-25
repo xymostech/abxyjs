@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Test</title>
+        <script src="../underscore-min.js" type="text/javascript"></script>
+        <script src="../jquery.min.js" type="text/javascript"></script>
+        <script src="../abxy/abxy.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var main_loop = function(game) {
+                game.Update();
+                game.Draw();
+
+                setTimeout(function() { main_loop(game); }, 1000.0 / 60.0);
+            };
+
+            $(function() {
+                ABXY.Startup({ root: "../abxy" });
+                ABXY.OnLoad(function() {
+                    var canvas = $("#canvas")[0];
+                    var game = new ABXY.game(canvas, {
+                        width: 800,
+                        height: 600,
+                    });
+
+                    var main_stage = new ABXY.worldstage();
+
+                    var sprite = new ABXY.sprite("img/glitch_00.png");
+
+                    main_stage.world.AddEntity(sprite);
+
+                    game.SetStage(main_stage);
+
+                    main_loop(game);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <canvas id="canvas">
+            Your browser doesn't support this. :(
+        </canvas>
+    </body>
+</html>
