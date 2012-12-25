@@ -1,8 +1,8 @@
 ABXY.entity2d = (function() {
 
 var entity2d = ABXY.entity.Extend({
-    Init: function(x, y, xvel, yvel, angle, angvel) {
-        this._super();
+    Init: function(name, x, y, xvel, yvel, angle, angvel) {
+        this._super(name);
 
         x = ABXY.util.defarg(x, 0);
         y = ABXY.util.defarg(y, 0);

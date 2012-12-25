@@ -3,9 +3,10 @@
  * the game. */
 ABXY.stage = (function() {
 
-var stage = ABXY.base.Extend({
-    /* stages hold on to their parent game */
-    Init: function() {
+var stage = ABXY.messagepasser.Extend({
+    Init: function(name) {
+        this._super(name);
+
         this.loaded = false;
     },
 
@@ -16,10 +17,12 @@ var stage = ABXY.base.Extend({
     OnLoad: function(game) {
         this.loaded = true;
         this.game = game;
+        this.SetMessageParent(game);
     },
 
     OnUnload: function() {
         this.loaded = false;
+        this.SetMessageParent(null);
     },
 });
 

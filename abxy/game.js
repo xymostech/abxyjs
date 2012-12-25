@@ -2,9 +2,11 @@
 
 ABXY.game = (function() {
 
-var game = ABXY.base.Extend({
+var game = ABXY.messagepasser.Extend({
     /* initialize with the main canvas */
-    Init: function(canvas, options) {
+    Init: function(name, canvas, options) {
+        this._super(name);
+
         this.canvas = canvas;
         this.context = this.canvas.getContext("2d");
 
@@ -22,8 +24,10 @@ var game = ABXY.base.Extend({
     SetStage: function(stage) {
         if (this.stage) {
             this.stage.OnUnload();
+            this.RemoveMessageChild(this.stage);
         }
         this.stage = stage;
+        this.AddMessageChild(this.stage);
         this.stage.OnLoad(this);
     },
 
@@ -31,6 +35,8 @@ var game = ABXY.base.Extend({
         if (this.stage) {
             this.stage.Update();
         }
+
+        ABXY.messagequeue.instance.SendMessages();
     },
 
     Draw: function() {

@@ -1,7 +1,9 @@
 ABXY.world = (function() {
 
-var world = ABXY.base.Extend({
+var world = ABXY.messagepasser.Extend({
     Init: function(stage) {
+        this._super("world", stage);
+
         this.stage = stage;
 
         this.entities = [];
@@ -15,6 +17,7 @@ var world = ABXY.base.Extend({
         if (this.updating) {
             this.to_add.push(entity);
         } else {
+            this.AddMessageChild(entity);
             entity.Register(this);
             this.entities.push(entity);
         }
@@ -25,6 +28,7 @@ var world = ABXY.base.Extend({
             this.to_remove.push(entity);
         } else {
             this.entities.splice(this.entities.indexOf(entity), 1);
+            this.RemoveMessageChild(entity);
         }
     },
 

@@ -1,7 +1,9 @@
 ABXY.worldstage = (function() {
 
 var worldstage = ABXY.stage.Extend({
-    Init: function(options) {
+    Init: function(name, options) {
+        this._super(name);
+
         this.options = $.extend({
             worldClass: ABXY.world,
         }, options);

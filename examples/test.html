@@ -18,16 +18,18 @@
                 ABXY.Startup({ root: "../abxy" });
                 ABXY.OnLoad(function() {
                     var canvas = $("#canvas")[0];
-                    var game = new ABXY.game(canvas, {
+                    var game = new ABXY.game("game", canvas, {
                         width: 800,
                         height: 600,
                     });
 
-                    var main_stage = new ABXY.worldstage();
+                    var main_stage = new ABXY.worldstage("stage");
 
-                    var sprite = new ABXY.sprite("img/glitch_00.png");
+                    var sprite = new ABXY.sprite("test1", "img/glitch_00.png");
+                    var sprite2 = new ABXY.sprite("test2", "img/glitch_00.png", 20, 0);
 
                     main_stage.world.AddEntity(sprite);
+                    main_stage.world.AddEntity(sprite2);
 
                     game.SetStage(main_stage);
 

@@ -1,7 +1,9 @@
 ABXY.entity = (function() {
 
-var entity = ABXY.base.Extend({
-    Init: function() {
+var entity = ABXY.messagepasser.Extend({
+    Init: function(name) {
+        this._super(name);
+
         this.world = null;
     },
 
@@ -10,6 +12,7 @@ var entity = ABXY.base.Extend({
 
     Register: function(world) {
         this.world = world;
+        this.SetMessageParent(world);
     },
 
     GetWorld: function() {
