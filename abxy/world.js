@@ -5,6 +5,7 @@ var world = ABXY.messagepasser.Extend({
         this._super("world", stage);
 
         this.stage = stage;
+        this.SetMessageParent(this.stage);
 
         this.entities = [];
         this.updating = false;

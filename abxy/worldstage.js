@@ -9,6 +9,7 @@ var worldstage = ABXY.stage.Extend({
         }, options);
 
         this.world = new this.options.worldClass(this);
+        this.AddMessageChild(this.world);
     },
 
     Update: function() {
