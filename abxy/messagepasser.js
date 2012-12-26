@@ -1,3 +1,11 @@
+/* messagepasser and messagequeue
+ *
+ * Messages can be send between entities to pass information between each other
+ *
+ * messagequeue holds a queue of messages to be sent out by the entities, and
+ * messagepasser is the base class from which all entities that want to send
+ * or receive messages should be of */
+
 ABXY.messagequeue = (function() {
 
 var messagequeue = ABXY.base.Extend({

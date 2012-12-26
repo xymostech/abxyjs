@@ -1,3 +1,6 @@
+/* entity2d
+ * an entity2d is an entity that provides basic 2d manipulation */
+
 ABXY.entity2d = (function() {
 
 var entity2d = ABXY.entity.Extend({

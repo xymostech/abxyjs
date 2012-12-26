@@ -1,3 +1,7 @@
+/* worldstage
+ * A stage that contains and updates a world
+ */
+
 ABXY.worldstage = (function() {
 
 var worldstage = ABXY.stage.Extend({

@@ -1,3 +1,7 @@
+/* world
+ * worlds contain lists of entities, and update and draw them
+ */
+
 ABXY.world = (function() {
 
 var world = ABXY.messagepasser.Extend({

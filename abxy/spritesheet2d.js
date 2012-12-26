@@ -1,3 +1,6 @@
+/* spritesheet2d
+ * a spritesheet2d is a sheet of sprites, all loaded from one image */
+
 ABXY.spritesheet2d = (function() {
 
 var spritesheet2d = ABXY.base.Extend({

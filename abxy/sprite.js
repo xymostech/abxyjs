@@ -1,3 +1,7 @@
+/* sprite
+ * a sprite is a single image which can be drawn
+ */
+
 ABXY.sprite = (function() {
 
 var sprite = ABXY.base.Extend({
