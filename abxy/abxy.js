@@ -40,7 +40,8 @@ var ABXY = {
         "world": ["messagepasser"],
         "entity": ["messagepasser"],
         "entity2d": ["entity"],
-        "sprite": ["entity2d"],
+        "sprite": ["base"],
+        "spritesheet": ["base"],
     },
 
     /*
