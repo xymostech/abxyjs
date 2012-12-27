@@ -40,6 +40,9 @@ var game = ABXY.messagepasser.Extend({
     },
 
     Draw: function() {
+        this.context.setTransform(1, 0, 0, 1, 0, 0);
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
         if (this.stage) {
             this.stage.Draw(this.context);
         }
