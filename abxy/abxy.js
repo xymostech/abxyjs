@@ -41,7 +41,7 @@ var ABXY = {
         "entity": ["messagepasser"],
         "entity2d": ["entity"],
         "sprite": ["base"],
-        "spritesheet": ["base"],
+        "spritesheet2d": ["base"],
     },
 
     /*
