@@ -17,10 +17,11 @@ var spritesheet2d = ABXY.base.Extend({
     },
 
     Draw: function(context, sprite) {
+        if (sprite < 0) return;
+        if (sprite > this.rows * this.columns) return;
+
         var yoff = Math.floor(sprite / this.columns);
         var xoff = sprite % this.columns;
-
-        if (yoff + 1 > this.rows) return;
 
         context.drawImage(
             this.texture,
