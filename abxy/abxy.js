@@ -37,6 +37,7 @@ var ABXY = {
         "game": ["messagepasser"],
         "stage": ["messagepasser"],
         "worldstage": ["stage"],
+        "worldstage2d": ["worldstage"],
         "world": ["messagepasser"],
         "entity": ["messagepasser"],
         "entity2d": ["entity"],
