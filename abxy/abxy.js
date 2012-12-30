@@ -43,6 +43,8 @@ var ABXY = {
         "entity2d": ["entity"],
         "sprite": ["base"],
         "spritesheet2d": ["base"],
+        "key": ["base"],
+        "timer": [],
     },
 
     /*
