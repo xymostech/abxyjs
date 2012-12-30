@@ -9,6 +9,10 @@ vector2d.prototype.Add = function(vect) {
     return new vector2d(this.x + vect.x, this.y + vect.y);
 };
 
+vector2d.prototype.Mult = function(scale) {
+    return new vector2d(this.x * scale, this.y * scale);
+};
+
 return vector2d;
 
 })();
@@ -23,6 +27,10 @@ var vector3d = function(x, y, z) {
 
 vector3d.prototype.Add = function(vect) {
     return new vector3d(this.x + vect.x, this.y + vect.y, this.z + vect.z);
+};
+
+vector3d.prototype.Mult = function(scale) {
+    return new vector3d(this.x * scale, this.y * scale, this.z * scale);
 };
 
 return vector3d;
