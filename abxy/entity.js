@@ -12,7 +12,7 @@ var entity = ABXY.messagepasser.Extend({
         this.world = null;
     },
 
-    Update: function() { },
+    Update: function(time) { },
     Draw: function(context) { },
 
     Register: function(world) {

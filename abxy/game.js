@@ -19,6 +19,8 @@ var game = ABXY.messagepasser.Extend({
         this.canvas.height = this.options.height;
 
         this.stage = null;
+
+        this.last_time = ABXY.timer.now();
     },
 
     SetStage: function(stage) {
@@ -32,8 +34,12 @@ var game = ABXY.messagepasser.Extend({
     },
 
     Update: function() {
+        var time = ABXY.timer.now();
+        var diff_time = time - this.last_time;
+        this.last_time = time;
+
         if (this.stage) {
-            this.stage.Update();
+            this.stage.Update(diff_time);
         }
 
         ABXY.messagequeue.instance.SendMessages();
