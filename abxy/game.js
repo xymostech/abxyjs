@@ -39,7 +39,7 @@ var game = ABXY.messagepasser.Extend({
         this.last_time = time;
 
         if (this.stage) {
-            this.stage.Update(diff_time);
+            this.stage.Update(diff_time / 1000);
         }
 
         ABXY.messagequeue.instance.SendMessages();
