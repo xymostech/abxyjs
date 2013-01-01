@@ -13,14 +13,20 @@ var game = ABXY.messagepasser.Extend({
         this.options = $.extend({
             width: 800,
             height: 600,
+            fps: 60
         }, options);
+
+        this.stats = {
+            fps: this.options.fps
+        };
 
         this.canvas.width = this.options.width;
         this.canvas.height = this.options.height;
 
         this.stage = null;
 
-        this.last_time = ABXY.timer.now();
+        this.fps_time = this.last_time = this.end_sleep = ABXY.timer.now();
+        this.fps_count = 0;
     },
 
     SetStage: function(stage) {
@@ -52,6 +58,25 @@ var game = ABXY.messagepasser.Extend({
         if (this.stage) {
             this.stage.Draw(this.context);
         }
+    },
+
+    Sleep: function(callback) {
+        if (ABXY.timer.now() - this.fps_time > 1000) {
+            this.fps_time += 1000;
+            this.stats.fps = this.fps_count;
+            this.fps_count = 0;
+        } else {
+            this.fps_count++;
+        }
+
+        var that = this;
+
+        var call = function() {
+            that.end_sleep = ABXY.timer.now();
+            callback();
+        };
+
+        setTimeout(call, Math.max(1000 / this.options.fps - (ABXY.timer.now() - this.end_sleep), 0));
     },
 });
 
