@@ -63,6 +63,18 @@ var world = ABXY.messagepasser.Extend({
     },
 
     GetEntities: function() { return this.entities; },
+
+    FilterEntities: function(types) {
+        if (!_.isArray(types)) {
+            types = [types];
+        }
+
+        _.filter(this.entities, function(entity) {
+            return _.any(types, function(type) {
+                return entity.IsType(type);
+            }, this);
+        }, this);
+    },
 });
 
 return world;

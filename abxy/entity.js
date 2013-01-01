@@ -10,6 +10,10 @@ var entity = ABXY.messagepasser.Extend({
         this._super(name);
 
         this.world = null;
+
+        this.types = [];
+
+        this.AddType("entity");
     },
 
     Update: function(time) { },
@@ -22,6 +26,14 @@ var entity = ABXY.messagepasser.Extend({
 
     GetParentWorld: function() {
         return this.world;
+    },
+
+    AddType: function(type) {
+        this.types.push(type);
+    },
+
+    IsType: function(type) {
+        return this.types.indexOf(type) !== -1;
     },
 });
 

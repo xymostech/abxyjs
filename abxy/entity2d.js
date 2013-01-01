@@ -7,6 +7,8 @@ var entity2d = ABXY.entity.Extend({
     Init: function(name, x, y, xvel, yvel, angle, angvel) {
         this._super(name);
 
+        this.AddType("entity2d");
+
         x = ABXY.util.defarg(x, 0);
         y = ABXY.util.defarg(y, 0);
         xvel = ABXY.util.defarg(xvel, 0);
