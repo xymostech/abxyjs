@@ -20,7 +20,7 @@ var entity = ABXY.messagepasser.Extend({
         this.SetMessageParent(world);
     },
 
-    GetWorld: function() {
+    GetParentWorld: function() {
         return this.world;
     },
 });

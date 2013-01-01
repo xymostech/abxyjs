@@ -61,6 +61,8 @@ var world = ABXY.messagepasser.Extend({
             e.Draw(context);
         }, this);
     },
+
+    GetEntities: function() { return this.entities; },
 });
 
 return world;
