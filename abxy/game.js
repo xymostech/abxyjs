@@ -13,7 +13,8 @@ var game = ABXY.messagepasser.Extend({
         this.options = $.extend({
             width: 800,
             height: 600,
-            fps: 60
+            fps: 60,
+            smooth: true,
         }, options);
 
         this.stats = {
@@ -29,6 +30,8 @@ var game = ABXY.messagepasser.Extend({
         this.fps_count = 0;
 
         this.keys = new ABXY.key(this.canvas);
+
+        this.SetSmooth(this.options.smooth);
     },
 
     SetStage: function(stage) {
@@ -80,6 +83,14 @@ var game = ABXY.messagepasser.Extend({
         };
 
         setTimeout(call, Math.max(1000 / this.options.fps - (ABXY.timer.now() - this.end_sleep), 0));
+    },
+
+    SetSmooth: function(smooth) {
+        this.options.smooth = smooth;
+
+        this.context.imageSmoothingEnabled = smooth;
+        this.context.webkitImageSmoothingEnabled = smooth;
+        this.context.mozImageSmoothingEnabled = smooth;
     },
 });
 
