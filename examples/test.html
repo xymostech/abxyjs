@@ -39,15 +39,19 @@
                     var game = new ABXY.game("game", canvas, {
                         width: 800,
                         height: 600,
+                        smooth: false,
                     });
 
-                    var main_stage = new ABXY.worldstage("stage");
+                    var main_stage = new ABXY.worldstage2d("stage");
 
                     var sprite = new spriteentity("test1", "img/glitch_00.png", 0, 0);
                     var sprite2 = new spriteentity("test2", "img/glitch_00.png", 20, 0);
 
                     main_stage.world.AddEntity(sprite);
                     main_stage.world.AddEntity(sprite2);
+
+                    main_stage.scale.x = 8;
+                    main_stage.scale.y = 8;
 
                     game.SetStage(main_stage);
 
