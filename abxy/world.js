@@ -69,7 +69,7 @@ var world = ABXY.messagepasser.Extend({
             types = [types];
         }
 
-        _.filter(this.entities, function(entity) {
+        return _.filter(this.entities, function(entity) {
             return _.any(types, function(type) {
                 return entity.IsType(type);
             }, this);
