@@ -22,7 +22,7 @@ var entity2d = ABXY.entity.Extend({
         this.angvel = angvel;
     },
 
-    Update: function(time) {
+    Update: function(time, keys) {
         this.pos = this.pos.Add(this.vel.Mult(time));
         this.angle += this.angvel * time;
     },

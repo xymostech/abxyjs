@@ -27,6 +27,8 @@ var game = ABXY.messagepasser.Extend({
 
         this.fps_time = this.last_time = this.end_sleep = ABXY.timer.now();
         this.fps_count = 0;
+
+        this.keys = new ABXY.key(this.canvas);
     },
 
     SetStage: function(stage) {
@@ -45,10 +47,11 @@ var game = ABXY.messagepasser.Extend({
         this.last_time = time;
 
         if (this.stage) {
-            this.stage.Update(diff_time / 1000);
+            this.stage.Update(diff_time / 1000, this.keys);
         }
 
         ABXY.messagequeue.instance.SendMessages();
+        this.keys.Update();
     },
 
     Draw: function() {
