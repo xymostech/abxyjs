@@ -32,8 +32,8 @@ var ABXY = {
     _main_dependencies: {
         "util": [],
         "math": [],
-        "vector": [],
         "base": [],
+        "vector": ["base"],
         "messagepasser": ["base"],
         "game": ["messagepasser"],
         "stage": ["messagepasser"],
