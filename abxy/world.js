@@ -75,6 +75,22 @@ var world = ABXY.messagepasser.Extend({
             }, this);
         }, this);
     },
+
+    CallOnEntities: function(types, callback, context) {
+        if (!_.isArray(types)) {
+            types = [types];
+        }
+
+        _.each(this.entities, function(entity) {
+            if (_.any(types, function(type) { return entity.IsType(type); })) {
+                if (context) {
+                    callback.call(context, entity);
+                } else {
+                    callback(entity);
+                }
+            }
+        }, this);
+    },
 });
 
 return world;
