@@ -33,6 +33,7 @@ var ABXY = {
         "util": [],
         "math": [],
         "base": [],
+        "collide": [],
         "vector": ["base"],
         "messagepasser": ["base"],
         "game": ["messagepasser"],

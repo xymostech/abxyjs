@@ -13,6 +13,7 @@ config["ABXY tests"] = {
         "abxy/util.js",
         "abxy/math.js",
         "abxy/vector.js",
+        "abxy/collide.js",
         "abxy/timer.js",
         "abxy/messagepasser.js",
         "abxy/game.js",
