@@ -36,7 +36,7 @@ var key = ABXY.base.Extend({
         return !!this.keys[code] !== !!this.last_keys[code];
     },
 
-    IsKeyStage: function(k, pressed, edge) {
+    IsKeyState: function(k, pressed, edge) {
         return this.IsKeyPressed(k) === pressed && this.IsKeyEdge(k) === edge;
     },
 });
