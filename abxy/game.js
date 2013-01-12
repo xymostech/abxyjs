@@ -30,6 +30,7 @@ var game = ABXY.messagepasser.Extend({
         this.fps_count = 0;
 
         this.keys = new ABXY.key(this.canvas);
+        this.mouse = new ABXY.mouse(this.canvas);
 
         this.SetSmooth(this.options.smooth);
     },
@@ -55,6 +56,7 @@ var game = ABXY.messagepasser.Extend({
 
         ABXY.messagequeue.instance.SendMessages();
         this.keys.Update();
+        this.mouse.Update();
     },
 
     Draw: function() {

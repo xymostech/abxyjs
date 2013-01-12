@@ -46,6 +46,7 @@ var ABXY = {
         "sprite": ["base"],
         "spritesheet2d": ["base"],
         "key": ["base"],
+        "mouse": ["base"],
         "timer": [],
         "sound": ["base"],
     },
