@@ -16,7 +16,7 @@ var entity = ABXY.messagepasser.Extend({
         this.AddType("entity");
     },
 
-    Update: function(time, keys) { },
+    Update: function(data) { },
     Draw: function(context) { },
 
     Register: function(world) {

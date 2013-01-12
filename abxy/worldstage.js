@@ -16,8 +16,8 @@ var worldstage = ABXY.stage.Extend({
         this.AddMessageChild(this.world);
     },
 
-    Update: function(time, keys) {
-        this.world.Update(time, keys);
+    Update: function(data) {
+        this.world.Update(data);
     },
 
     Draw: function(context) {

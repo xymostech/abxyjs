@@ -37,10 +37,10 @@ var world = ABXY.messagepasser.Extend({
         }
     },
 
-    Update: function(time, keys) {
+    Update: function(data) {
         this.updating = true;
         _.each(this.entities, function(e) {
-            e.Update(time, keys);
+            e.Update(data);
         }, this);
         this.updating = false;
 

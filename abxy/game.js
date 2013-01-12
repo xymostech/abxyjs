@@ -50,8 +50,14 @@ var game = ABXY.messagepasser.Extend({
         var diff_time = time - this.last_time;
         this.last_time = time;
 
+        var data = {
+            time: diff_time / 1000,
+            keys: this.keys,
+            mouse: this.mouse,
+        };
+
         if (this.stage) {
-            this.stage.Update(diff_time / 1000, this.keys);
+            this.stage.Update(data);
         }
 
         ABXY.messagequeue.instance.SendMessages();

@@ -12,7 +12,7 @@ var stage = ABXY.messagepasser.Extend({
 
     /* By default, stages don't do anything fun */
     Draw: function(context) { },
-    Update: function(time, keys) { },
+    Update: function(data) { },
 
     OnLoad: function(game) {
         this.loaded = true;
