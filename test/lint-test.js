@@ -66,4 +66,8 @@ buster.testCase("lint", {
             "ABXY": true
         });
     },
+
+    "lint base.js": function(done) {
+        test_lint(done, "base", default_options, default_globals);
+    },
 });
