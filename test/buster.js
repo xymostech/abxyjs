@@ -6,6 +6,7 @@ config["ABXY tests"] = {
     libs: [
         "lib/jquery.min.js",
         "lib/underscore-min.js",
+        "lib/jshint.js",
     ],
     sources: [
         "abxy/abxy.js",
