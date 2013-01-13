@@ -17,11 +17,11 @@
             $(function() {
                 ABXY.Startup({ root: "../abxy" });
                 ABXY.OnLoad(function() {
-                    var spriteentity = ABXY.entity2d.Extend({
+                    var Spriteentity = ABXY.Entity2d.Extend({
                         Init: function(name, sprite, x, y) {
                             this._super(name, x, y);
 
-                            this.sprite = new ABXY.sprite(sprite);
+                            this.sprite = new ABXY.Sprite(sprite);
                         },
 
                         Draw: function(context) {
@@ -36,16 +36,16 @@
                     });
 
                     var canvas = $("#canvas")[0];
-                    var game = new ABXY.game("game", canvas, {
+                    var game = new ABXY.Game("game", canvas, {
                         width: 800,
                         height: 600,
                         smooth: false,
                     });
 
-                    var main_stage = new ABXY.worldstage2d("stage");
+                    var main_stage = new ABXY.Worldstage2d("stage");
 
-                    var sprite = new spriteentity("test1", "img/glitch_00.png", 0, 0);
-                    var sprite2 = new spriteentity("test2", "img/glitch_00.png", 20, 0);
+                    var sprite = new Spriteentity("test1", "img/glitch_00.png", 0, 0);
+                    var sprite2 = new Spriteentity("test2", "img/glitch_00.png", 20, 0);
 
                     main_stage.world.AddEntity(sprite);
                     main_stage.world.AddEntity(sprite2);

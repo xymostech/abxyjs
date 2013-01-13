@@ -1,6 +1,6 @@
 /* Base class for all ABXY classes. Includes an `extend` method to simulate
  * inheritance. */
-ABXY.base = (function() {
+ABXY.Base = (function() {
     "use strict";
 
     var initializing = false;
@@ -9,9 +9,9 @@ ABXY.base = (function() {
      * http://ejohn.org/blog/simple-javascript-inheritance/
      * MIT Licensed */
 
-    var base = function() {};
+    var Base = function() {};
 
-    base.Extend = function(sub) {
+    Base.Extend = function(sub) {
         /*jshint newcap:false loopfunc:true forin:false */
         var _super = this.prototype;
 
@@ -63,11 +63,11 @@ ABXY.base = (function() {
         Class.prototype.constructor = Class;
 
         // Add the extend method
-        Class.Extend = base.Extend;
+        Class.Extend = Base.Extend;
 
         return Class;
     };
 
-    return base;
+    return Base;
 
 })();

@@ -3,40 +3,41 @@
  * done in the game
  */
 
-ABXY.entity = (function() {
+ABXY.Entity = (function() {
+    "use strict";
 
-var entity = ABXY.messagepasser.Extend({
-    Init: function(name) {
-        this._super(name);
+    var Entity = ABXY.Messagepasser.Extend({
+        Init: function(name) {
+            this._super(name);
 
-        this.world = null;
+            this.world = null;
 
-        this.types = [];
+            this.types = [];
 
-        this.AddType("entity");
-    },
+            this.AddType("entity");
+        },
 
-    Update: function(data) { },
-    Draw: function(context) { },
+        Update: function(/* data */) { },
+        Draw: function(/* context */) { },
 
-    Register: function(world) {
-        this.world = world;
-        this.SetMessageParent(world);
-    },
+        Register: function(world) {
+            this.world = world;
+            this.SetMessageParent(world);
+        },
 
-    GetParentWorld: function() {
-        return this.world;
-    },
+        GetParentWorld: function() {
+            return this.world;
+        },
 
-    AddType: function(type) {
-        this.types.push(type);
-    },
+        AddType: function(type) {
+            this.types.push(type);
+        },
 
-    IsType: function(type) {
-        return this.types.indexOf(type) !== -1;
-    },
-});
+        IsType: function(type) {
+            return this.types.indexOf(type) !== -1;
+        }
+    });
 
-return entity;
+    return Entity;
 
 })();

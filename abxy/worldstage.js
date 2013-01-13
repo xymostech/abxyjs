@@ -2,29 +2,30 @@
  * A stage that contains and updates a world
  */
 
-ABXY.worldstage = (function() {
+ABXY.Worldstage = (function() {
+    "use strict";
 
-var worldstage = ABXY.stage.Extend({
-    Init: function(name, options) {
-        this._super(name);
+    var Worldstage = ABXY.Stage.Extend({
+        Init: function(name, options) {
+            this._super(name);
 
-        this.options = $.extend({
-            worldClass: ABXY.world,
-        }, options);
+            this.options = $.extend({
+                worldClass: ABXY.World
+            }, options);
 
-        this.world = new this.options.worldClass(this);
-        this.AddMessageChild(this.world);
-    },
+            this.world = new this.options.worldClass(this);
+            this.AddMessageChild(this.world);
+        },
 
-    Update: function(data) {
-        this.world.Update(data);
-    },
+        Update: function(data) {
+            this.world.Update(data);
+        },
 
-    Draw: function(context) {
-        this.world.Draw(context);
-    },
-});
+        Draw: function(context) {
+            this.world.Draw(context);
+        }
+    });
 
-return worldstage;
+    return Worldstage;
 
 })();

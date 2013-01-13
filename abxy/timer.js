@@ -1,19 +1,20 @@
 /* timer module
  * uses the highest accuracy timer available */
-ABXY.timer = (function() {
+ABXY.Timer = (function() {
+    "use strict";
 
-var timer = {};
+    var Timer = {};
 
-timer.slow = Date.now;
+    Timer.slow = Date.now;
 
-if (window.performance && window.performance.now) {
-    timer.now = function() { return window.performance.now(); };
-} else if (window.performance && window.performance.webkitNow) {
-    timer.now = function() { return window.performance.webkitNow(); };
-} else {
-    timer.now = Date.now;
-}
+    if (window.performance && window.performance.now) {
+        Timer.now = function() { return window.performance.now(); };
+    } else if (window.performance && window.performance.webkitNow) {
+        Timer.now = function() { return window.performance.webkitNow(); };
+    } else {
+        Timer.now = Date.now;
+    }
 
-return timer;
+    return Timer;
 
 })();

@@ -1,58 +1,64 @@
-ABXY.vector2d = (function() {
+ABXY.Vector2d = (function() {
+    "use strict";
 
-var vector2d = ABXY.base.Extend({
-    Init: function(x, y) {
-        this.x = x;
-        this.y = y;
-    },
+    var Vector2d = ABXY.Base.Extend({
+        Init: function(x, y) {
+            this.x = x;
+            this.y = y;
+        },
 
-    Add: function(vect) {
-        return new vector2d(this.x + vect.x, this.y + vect.y);
-    },
+        Add: function(vect) {
+            return new Vector2d(this.x + vect.x, this.y + vect.y);
+        },
 
-    Sub: function(vect) {
-        return new vector2d(this.x - vect.x, this.y - vect.y);
-    },
+        Sub: function(vect) {
+            return new Vector2d(this.x - vect.x, this.y - vect.y);
+        },
 
-    Mult: function(scale) {
-        return new vector2d(this.x * scale, this.y * scale);
-    },
+        Mult: function(scale) {
+            return new Vector2d(this.x * scale, this.y * scale);
+        },
 
-    Div: function(scale) {
-        return new vector2d(this.x / scale, this.y / scale);
-    },
-});
+        Div: function(scale) {
+            return new Vector2d(this.x / scale, this.y / scale);
+        }
+    });
 
-return vector2d;
+    return Vector2d;
 
 })();
 
-ABXY.vector3d = (function() {
+ABXY.Vector3d = (function() {
+    "use strict";
 
-var vector3d = ABXY.base.Extend({
-    Init: function(x, y, z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
-    },
+    var Vector3d = ABXY.Base.Extend({
+        Init: function(x, y, z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        },
 
-    Add: function(vect) {
-        return new vector3d(this.x + vect.x, this.y + vect.y, this.z + vect.z);
-    },
+        Add: function(vect) {
+            return new Vector3d(
+                this.x + vect.x, this.y + vect.y, this.z + vect.z
+            );
+        },
 
-    Sub: function(vect) {
-        return new vector3d(this.x - vect.x, this.y - vect.y, this.z - vect.z);
-    },
+        Sub: function(vect) {
+            return new Vector3d(
+                this.x - vect.x, this.y - vect.y, this.z - vect.z
+            );
+        },
 
-    Mult: function(scale) {
-        return new vector3d(this.x * scale, this.y * scale, this.z * scale);
-    },
+        Mult: function(scale) {
+            return new Vector3d(this.x * scale, this.y * scale, this.z * scale);
+        },
 
-    Div: function(scale) {
-        return new vector3d(this.x / scale, this.y / scale, this.z / scale);
-    },
-});
+        Div: function(scale) {
+            return new Vector3d(this.x / scale, this.y / scale, this.z / scale);
+        }
+    });
 
-return vector3d;
+    return Vector3d;
 
 })();

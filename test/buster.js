@@ -27,6 +27,7 @@ config["ABXY tests"] = {
         "abxy/sprite.js",
         "abxy/spritesheet2d.js",
         "abxy/key.js",
+        "abxy/mouse.js",
         "abxy/sound.js",
     ],
     tests: [

@@ -64,7 +64,7 @@ ABXY = (function() {
                 root: "abxy"
             }, options);
 
-            this.loader.LoadDependencies(
+            this.Loader.LoadDependencies(
                 options.root,
                 this._main_dependencies,
                 this._WhenLoaded.bind(this)
@@ -73,7 +73,7 @@ ABXY = (function() {
     };
 
     // Dependencies loading module
-    ABXY.loader = {
+    ABXY.Loader = {
         LoadDependencies: function(root, dependencies, callback) {
             var load_status = {};
 
