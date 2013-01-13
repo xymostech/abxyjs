@@ -21,6 +21,11 @@ var test_lint = function(done, file, options, globals) {
                     error += "\n";
                     if (e.evidence) {
                         error += e.evidence;
+                        if (e.character) {
+                            error += '\n' +
+                                     (new Array(e.character)).join(' ') +
+                                     '^'
+                        }
                     }
 
                     return error;
@@ -30,6 +35,11 @@ var test_lint = function(done, file, options, globals) {
             }
 
             assert(result);
+        }),
+        error: done(function(data, stat, error) {
+            buster.log("Error loading " + file + ".js: " + error);
+
+            assert(false);
         })
     });
 };
