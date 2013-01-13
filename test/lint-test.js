@@ -34,27 +34,34 @@ var test_lint = function(done, file, options, globals) {
     });
 };
 
+var default_options = {
+    bitwise: true,
+    curly: true,
+    eqeqeq: true,
+    forin: true,
+    immed: true,
+    indent: 4,
+    latedef: true,
+    noarg: true,
+    undef: true,
+    unused: true,
+    strict: true,
+    trailing: true,
+    maxlen: 80,
+    eqnull: true,
+    browser: true,
+    jquery: true,
+    devel: true
+};
+
+var default_globals = {
+    "_": false,
+    "ABXY": false
+};
+
 buster.testCase("lint", {
     "lint abxy.js": function(done) {
-        test_lint(done, "abxy", {
-            bitwise: true,
-            curly: true,
-            eqeqeq: true,
-            forin: true,
-            immed: true,
-            indent: 4,
-            latedef: true,
-            noarg: true,
-            undef: true,
-            unused: true,
-            strict: true,
-            trailing: true,
-            maxlen: 80,
-            eqnull: true,
-            browser: true,
-            jquery: true,
-            devel: true
-        }, {
+        test_lint(done, "abxy", default_options, {
             "_": false,
             "ABXY": true
         });
