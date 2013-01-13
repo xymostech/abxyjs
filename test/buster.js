@@ -4,8 +4,8 @@ config["ABXY tests"] = {
     rootPath: "../",
     environment: "browser",
     libs: [
-        "jquery.min.js",
-        "underscore-min.js",
+        "lib/jquery.min.js",
+        "lib/underscore-min.js",
     ],
     sources: [
         "abxy/abxy.js",
