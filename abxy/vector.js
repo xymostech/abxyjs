@@ -21,7 +21,7 @@ ABXY.Vector2d = (function() {
 
         Div: function(scale) {
             return new Vector2d(this.x / scale, this.y / scale);
-        }
+        },
     });
 
     return Vector2d;
@@ -56,7 +56,7 @@ ABXY.Vector3d = (function() {
 
         Div: function(scale) {
             return new Vector3d(this.x / scale, this.y / scale, this.z / scale);
-        }
+        },
     });
 
     return Vector3d;

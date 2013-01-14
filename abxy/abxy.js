@@ -69,7 +69,7 @@ ABXY = (function() {
                 this._main_dependencies,
                 this._WhenLoaded.bind(this)
             );
-        }
+        },
     };
 
     // Dependencies loading module
@@ -173,7 +173,7 @@ ABXY = (function() {
             return function() {
                 return finished;
             };
-        }
+        },
     };
 
     return ABXY;

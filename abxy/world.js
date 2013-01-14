@@ -93,7 +93,7 @@ ABXY.World = (function() {
                     }
                 }
             }, this);
-        }
+        },
     });
 
     return World;

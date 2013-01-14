@@ -14,7 +14,7 @@ ABXY.Sprite = (function() {
 
         Draw: function(context) {
             context.drawImage(this.texture, 0, 0);
-        }
+        },
     });
 
     return Sprite;

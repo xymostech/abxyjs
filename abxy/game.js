@@ -107,7 +107,7 @@ ABXY.Game = (function() {
             this.context.imageSmoothingEnabled = smooth;
             this.context.webkitImageSmoothingEnabled = smooth;
             this.context.mozImageSmoothingEnabled = smooth;
-        }
+        },
     });
 
     return Game;

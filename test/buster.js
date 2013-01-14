@@ -31,6 +31,6 @@ config["ABXY tests"] = {
         "abxy/sound.js",
     ],
     tests: [
-        "test/*-test.js"
+        "test/*-test.js",
     ]
 }

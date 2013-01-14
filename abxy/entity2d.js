@@ -31,7 +31,7 @@ ABXY.Entity2d = (function() {
         Transform: function(context) {
             context.translate(this.pos.x, this.pos.y);
             context.rotate(this.angle);
-        }
+        },
     });
 
     return Entity2d;

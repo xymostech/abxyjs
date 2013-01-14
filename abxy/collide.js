@@ -76,7 +76,7 @@ ABXY.Collide2d = (function() {
             }
 
             return true;
-        }
+        },
     };
 
     return Collide2d;

@@ -43,7 +43,7 @@ ABXY.Sound = (function() {
         SetVolume: function(volume) {
             this.volume = ABXY.Math.clamp(volume, 0, 1);
             this.sound.volume = this.volume;
-        }
+        },
     });
 
     return Sound;

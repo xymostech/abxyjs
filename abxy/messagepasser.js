@@ -115,7 +115,7 @@ ABXY.Messagepasser = (function() {
             }, this);
         },
 
-        ReceiveMessage: function(/* from, name, message */) { }
+        ReceiveMessage: function(/* from, name, message */) { },
     });
 
     return Messagepasser;

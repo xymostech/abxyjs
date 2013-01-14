@@ -24,7 +24,7 @@ ABXY.Stage = (function() {
         OnUnload: function() {
             this.loaded = false;
             this.SetMessageParent(null);
-        }
+        },
     });
 
     return Stage;

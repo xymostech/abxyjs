@@ -23,7 +23,7 @@ ABXY.Math = (function() {
          * values */
         clamp: function(val, low, high) {
             return (val < low) ? low : (val > high) ? high : val;
-        }
+        },
     };
 
     return ABXYMath;

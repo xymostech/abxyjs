@@ -31,7 +31,7 @@ ABXY.Spritesheet2d = (function() {
                 0, 0,
                 this.width, this.height
             );
-        }
+        },
     });
 
     return Spritesheet2d;

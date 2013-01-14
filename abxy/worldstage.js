@@ -23,7 +23,7 @@ ABXY.Worldstage = (function() {
 
         Draw: function(context) {
             this.world.Draw(context);
-        }
+        },
     });
 
     return Worldstage;

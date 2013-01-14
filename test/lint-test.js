@@ -61,7 +61,8 @@ var default_options = {
     eqnull: true,
     browser: true,
     jquery: true,
-    devel: true
+    devel: true,
+    es5: true,
 };
 
 var default_globals = {

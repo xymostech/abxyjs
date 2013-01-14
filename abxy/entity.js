@@ -35,7 +35,7 @@ ABXY.Entity = (function() {
 
         IsType: function(type) {
             return this.types.indexOf(type) !== -1;
-        }
+        },
     });
 
     return Entity;

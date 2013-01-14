@@ -40,7 +40,7 @@ ABXY.Key = (function() {
         IsKeyState: function(k, pressed, edge) {
             return this.IsKeyPressed(k) === pressed &&
                    this.IsKeyEdge(k) === edge;
-        }
+        },
     });
 
     /* default keys that can't be figured out any other way */
@@ -83,7 +83,7 @@ ABXY.Key = (function() {
         "dash": 189,
         "-": 189,
         "equals": 187,
-        "=": 187
+        "=": 187,
     };
 
     /* Normal letters and numbers */

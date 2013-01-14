@@ -56,7 +56,7 @@ ABXY.Mouse = (function() {
 
         MousePos: function() {
             return new ABXY.Vector2d(this.pos.x, this.pos.y);
-        }
+        },
     });
 
     return Mouse;

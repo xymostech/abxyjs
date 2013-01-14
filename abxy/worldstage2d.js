@@ -22,7 +22,7 @@ ABXY.Worldstage2d = (function() {
 
         ScrollTo: function(pos) {
             this.position = pos;
-        }
+        },
     });
 
     return Worldstage2d;
