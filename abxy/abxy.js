@@ -44,12 +44,14 @@ ABXY = (function() {
             "world": ["messagepasser"],
             "entity": ["messagepasser"],
             "entity2d": ["entity"],
+            "collideentity2d": ["entity2d"],
             "sprite": ["base"],
             "spritesheet2d": ["base"],
             "key": ["base"],
             "mouse": ["base"],
             "timer": [],
-            "sound": ["base"]
+            "sound": ["base"],
+            "shape": ["base"],
         },
 
         /*

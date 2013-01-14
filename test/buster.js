@@ -24,11 +24,13 @@ config["ABXY tests"] = {
         "abxy/world.js",
         "abxy/entity.js",
         "abxy/entity2d.js",
+        "abxy/collideentity2d.js",
         "abxy/sprite.js",
         "abxy/spritesheet2d.js",
         "abxy/key.js",
         "abxy/mouse.js",
         "abxy/sound.js",
+        "abxy/shape.js",
     ],
     tests: [
         "test/*-test.js",
