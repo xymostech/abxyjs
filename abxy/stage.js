@@ -17,12 +17,13 @@ ABXY.Stage = (function() {
 
         OnLoad: function(game) {
             this.loaded = true;
-            this.game = game;
-            this.SetMessageParent(game);
+            this.parent = game;
+            this.SetMessageParent(this.parent);
         },
 
         OnUnload: function() {
             this.loaded = false;
+            this.parent = null;
             this.SetMessageParent(null);
         },
     });

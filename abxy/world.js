@@ -9,8 +9,8 @@ ABXY.World = (function() {
         Init: function(stage) {
             this._super("world", stage);
 
-            this.stage = stage;
-            this.SetMessageParent(this.stage);
+            this.parent = stage;
+            this.SetMessageParent(this.parent);
 
             this.entities = [];
             this.updating = false;

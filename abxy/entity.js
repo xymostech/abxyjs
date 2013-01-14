@@ -21,12 +21,8 @@ ABXY.Entity = (function() {
         Draw: function(/* context */) { },
 
         Register: function(world) {
-            this.world = world;
-            this.SetMessageParent(world);
-        },
-
-        GetParentWorld: function() {
-            return this.world;
+            this.parent = world;
+            this.SetMessageParent(this.parent);
         },
 
         AddType: function(type) {
