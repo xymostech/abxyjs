@@ -18,6 +18,10 @@ ABXY.Worldstage2d = (function() {
             this._super(context);
 
             context.restore();
+        },
+
+        ScrollTo: function(pos) {
+            this.position = pos;
         }
     });
 
